@@ -49,7 +49,7 @@ const postToInsta = require("./uploadLocalImage");
 const app = express();
 // Configure CORS to allow requests from the specific URL
 const corsOptions = {
-  origin: "https://ig-bot-izs2.onrender.com", // Specify the allowed origin
+  origin: "https://insta.dummy.ink", // Specify the allowed origin
   optionsSuccessStatus: 200, // some legacy browsers (IE11, various SmartTVs) choke on 204
 };
 
