@@ -47,7 +47,13 @@ const compressImage = require("./reduceImage");
 const postToInsta = require("./uploadLocalImage");
 
 const app = express();
-app.use(cors());
+// Configure CORS to allow requests from the specific URL
+const corsOptions = {
+  origin: "https://ig-bot-izs2.onrender.com", // Specify the allowed origin
+  optionsSuccessStatus: 200, // some legacy browsers (IE11, various SmartTVs) choke on 204
+};
+
+app.use(cors(corsOptions)); // Use CORS with the specified options
 app.use(bodyParser.json());
 
 const port = process.env.PORT || 3000;
